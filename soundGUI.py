@@ -89,8 +89,7 @@ def aNote(event):
    
 
 ## Function to change the preloaded sounds
-def key_Checker(event):
-    pass
+
 def changeSound(event):
     File = open("SoundPaths.txt","r")
     contents = File.readlines()
@@ -99,9 +98,9 @@ def changeSound(event):
     label.pack()
     temp_Win.bind("<Key>")
     temp_Win.withdraw()
-    dirname = filedialog.askdirectory(parent = temp_Win,initialdir = "/",title = 'Please select a directory')
+    dirname = filedialog.askopenfilename(parent = temp_Win,initialdir = "/",title = 'Please select a file')
     #File=open("SoundPaths.txt","w")
-    #contents[selectedNum]= dirname
+    #contents[2]= dirname +"\n"
     #File.writelines(contents)
     #File.close()
     print(dirname)
