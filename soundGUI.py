@@ -15,7 +15,7 @@ def aNote(event):
     content = pathFile.readlines()
     pathFile.close()
     
-    if (event.keysym == 'Home'):
+    if (event.keysym == 'End'):
         Stringy = content[0]
         length = len(Stringy)
         if(Stringy[length-2:length-1] == "v"):
@@ -27,7 +27,7 @@ def aNote(event):
             sound.play()
             return
 
-    elif (event.keysym == 'Up'):
+    elif (event.keysym == 'Down'):
         Stringy = content[1]
         length = len(Stringy)
         if(Stringy[length-2:length-1] == "v"):
@@ -39,7 +39,7 @@ def aNote(event):
             sound.play()
             return
 
-    elif (event.keysym == 'Prior'):
+    elif (event.keysym == 'Next'):
         Stringy = content[2]
         length = len(Stringy)
         if(Stringy[length-2:length-1] == "v"):
@@ -87,10 +87,24 @@ def aNote(event):
             sound.play()
             return
    
+##Functions to determine which value to change
+def soundOne(event):
+    changeSound(0)
 
+def soundTwo(event):
+    changeSound(1)
+
+def soundThree(event):
+    changeSound(2)
+
+def soundFour(event):
+    changeSound(3)
+
+def soundFive(event):
+    changeSound(4)
 ## Function to change the preloaded sounds
 
-def changeSound(event):
+def changeSound(num):
     File = open("SoundPaths.txt","r")
     contents = File.readlines()
     temp_Win = Tk()
@@ -99,13 +113,14 @@ def changeSound(event):
     temp_Win.bind("<Key>")
     temp_Win.withdraw()
     dirname = filedialog.askopenfilename(parent = temp_Win,initialdir = "/",title = 'Please select a file')
-    #File=open("SoundPaths.txt","w")
-    #contents[2]= dirname +"\n"
-    #File.writelines(contents)
-    #File.close()
-    print(dirname)
-    temp_Win.destroy()
-    
+    if dirname != "":
+        File=open("SoundPaths.txt","w")
+        contents[num]= dirname +"\n"
+        File.writelines(contents)
+        File.close()
+        print(dirname)
+        temp_Win.destroy()
+    print("tester")
 # Main Window GUI
 def soundGUI():
     window = Tk()
@@ -113,11 +128,25 @@ def soundGUI():
     window.geometry("1400x700")
     window.bind("<Key>",aNote)
 
-
+    print("Testing")
     label = Label(window,text="Sound Files must be .wav format.",font=("Helvetica",35))
     label.pack()
 
-    myButton = Button(window, text="Load New Sounds")
-    myButton.bind('<Button-1>',changeSound)
-    myButton.pack()
+    
+    OneButton = Button(window, text="Change Sound One")
+    OneButton.bind('<Button-1>',soundOne)
+    OneButton.pack()
+    TwoButton = Button(window, text="Change Sound Two")
+    TwoButton.bind('<Button-1>',soundTwo)
+    TwoButton.pack()
+    ThreeButton = Button(window, text="Change Sound Three")
+    ThreeButton.bind('<Button-1>',soundThree)
+    ThreeButton.pack()
+    FourButton = Button(window, text="Change Sound Four")
+    FourButton.bind('<Button-1>',soundFour)
+    FourButton.pack()
+    FiveButton = Button(window, text="Change Sound Five")
+    FiveButton.bind('<Button-1>',soundFour)
+    FiveButton.pack()
+    
     window.mainloop()
