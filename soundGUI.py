@@ -120,32 +120,39 @@ def changeSound(num):
         File.close()
         print(dirname)
         temp_Win.destroy()
-    print("tester")
 # Main Window GUI
 def soundGUI():
     window = Tk()
     window.title("SoundBoard")
     window.geometry("1400x700")
     window.bind("<Key>",aNote)
+    window.configure(bg='black')
 
-    print("Testing")
+
+    
     label = Label(window,text="Sound Files must be .wav format.",font=("Helvetica",35))
+    label.configure(bg='gray')
     label.pack()
 
     
     OneButton = Button(window, text="Change Sound One")
+    OneButton.configure(bg='gray')
     OneButton.bind('<Button-1>',soundOne)
     OneButton.pack()
     TwoButton = Button(window, text="Change Sound Two")
+    TwoButton.configure(bg='gray')
     TwoButton.bind('<Button-1>',soundTwo)
     TwoButton.pack()
     ThreeButton = Button(window, text="Change Sound Three")
+    ThreeButton.configure(bg='gray')
     ThreeButton.bind('<Button-1>',soundThree)
     ThreeButton.pack()
     FourButton = Button(window, text="Change Sound Four")
+    FourButton.configure(bg='gray')
     FourButton.bind('<Button-1>',soundFour)
     FourButton.pack()
     FiveButton = Button(window, text="Change Sound Five")
+    FiveButton.configure(bg='gray')
     FiveButton.bind('<Button-1>',soundFour)
     FiveButton.pack()
     
