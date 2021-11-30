@@ -9,6 +9,7 @@ def soundGUI():
     window = Tk()
     window.title("SoundBoard")
     window.geometry("1400x700")
+    #this line might be the key to having a "generalized keybind" inside and outside of the program
     window.bind("<Key>",aNote)
     window.configure(bg="black")
   #The following line overrides the screen and does an odd sort of takeover  
@@ -34,6 +35,15 @@ def soundGUI():
     FiveButton = Button(window, text="Change Sound Five")
     FiveButton.bind('<Button-1>',soundFour)
     FiveButton.pack()
+
+    #----button-for new keybind-----in progress
+    #
+    newBindButton = Button(window, text = "New Sound Bind")
+    newBindButton.bind('<Button-1>', createNote(window))
+    newBindButton.pack()
+
+    #----button for deleting binds----unfinished
+    #deleteBind = Button(window, text = "Delete Sound Bind")
 
     
     window.mainloop()

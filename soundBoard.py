@@ -15,9 +15,6 @@ def changeSound(num):
     File = open("SoundPaths.txt","r")
     contents = File.readlines()
     temp_Win = Tk()
-    label = Label(temp_Win,text="Press the key to rebind.",font=("Helvetica",20))
-    label.pack()
-    temp_Win.bind("<Key>")
     temp_Win.withdraw()
     dirname = filedialog.askopenfilename(parent = temp_Win,initialdir = "/",title = 'Please select a file')
     if dirname != "":
@@ -29,6 +26,9 @@ def changeSound(num):
         temp_Win.destroy()
     print("tester")
 
+# Function to return what key was pressed
+def keyPressed(event):
+    return event.char
 ##Functions to determine which value to change
 def soundOne(event):
     changeSound(0)
@@ -45,6 +45,13 @@ def soundFour(event):
 def soundFive(event):
     changeSound(4)
 
+def createNote(window):
+    print("This should not be printing")
+    test = Label(window, text="Press the key that you want to bind", font =( "Heleveltica", 15))
+    test.pack()
+    
+    #keyPrompt = Label(tempWin, text = "Press the Key for the new sound")
+    
 
 #This function handles the "playing" of notes.
 # Function pulling the sounds from SoundPaths.txt and Binding the Sound to a specified key
