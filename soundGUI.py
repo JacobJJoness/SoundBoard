@@ -1,138 +1,24 @@
-from tkinter import * 
-from tkinter import filedialog
-import pygame
-from soundBoard import *
+from soundBoard import*
 
-pygame.mixer.pre_init(44100, -16, 2, 2048)
-pygame.init()
-pygame.mixer.init()
 
-# Function pulling the sounds from SoundPaths.txt and Binding the Sound to a specified key
-# and playing the sound at the given path from SoundPaths.txt
-def aNote(event):
-    
-    pathFile = open("SoundPaths.txt")
-    content = pathFile.readlines()
-    pathFile.close()
-    
-    if (event.keysym == 'End'):
-        Stringy = content[0]
-        length = len(Stringy)
-        if(Stringy[length-2:length-1] == "v"):
-            sound = pygame.mixer.Sound(Stringy[:length-1])
-            sound.play()
-            return
-        else:
-            sound = pygame.mixer.Sound(Stringy)
-            sound.play()
-            return
 
-    elif (event.keysym == 'Down'):
-        Stringy = content[1]
-        length = len(Stringy)
-        if(Stringy[length-2:length-1] == "v"):
-            sound = pygame.mixer.Sound(Stringy[:length-1])
-            sound.play()
-            return
-        else:
-            sound = pygame.mixer.Sound(Stringy)
-            sound.play()
-            return
 
-    elif (event.keysym == 'Next'):
-        Stringy = content[2]
-        length = len(Stringy)
-        if(Stringy[length-2:length-1] == "v"):
-            sound = pygame.mixer.Sound(Stringy[:length-1])
-            sound.play()
-            return
-        else:
-            sound = pygame.mixer.Sound(Stringy)
-            sound.play()
-            return
 
-    elif (event.keysym == 'Left'):
-        Stringy = content[3]
-        length = len(Stringy)
-        if(Stringy[length-2:length-1] == "v"):
-            sound = pygame.mixer.Sound(Stringy[:length-1])
-            sound.play()
-            return
-        else:
-            sound = pygame.mixer.Sound(Stringy)
-            sound.play()
-            return
-
-    elif (event.keysym == 'Clear'):
-        Stringy = content[4]
-        length = len(Stringy)
-        if(Stringy[length-2:length-1] == "v"):
-            sound = pygame.mixer.Sound(Stringy[:length-1])
-            sound.play()
-            return
-        else:
-            sound = pygame.mixer.Sound(Stringy)
-            sound.play()
-            return
-
-    elif (event.keysym == 'Right'):
-        Stringy = content[5]
-        length = len(Stringy)
-        if(Stringy[length-2:length-1] == "v"):
-            sound = pygame.mixer.Sound(Stringy[:length-1])
-            sound.play()
-            return
-        else:
-            sound = pygame.mixer.Sound(Stringy)
-            sound.play()
-            return
-   
-##Functions to determine which value to change
-def soundOne(event):
-    changeSound(0)
-
-def soundTwo(event):
-    changeSound(1)
-
-def soundThree(event):
-    changeSound(2)
-
-def soundFour(event):
-    changeSound(3)
-
-def soundFive(event):
-    changeSound(4)
-## Function to change the preloaded sounds
-
-def changeSound(num):
-    File = open("SoundPaths.txt","r")
-    contents = File.readlines()
-    temp_Win = Tk()
-    label = Label(temp_Win,text="Press the key to rebind.",font=("Helvetica",20))
-    label.pack()
-    temp_Win.bind("<Key>")
-    temp_Win.withdraw()
-    dirname = filedialog.askopenfilename(parent = temp_Win,initialdir = "/",title = 'Please select a file')
-    if dirname != "":
-        File=open("SoundPaths.txt","w")
-        contents[num]= dirname +"\n"
-        File.writelines(contents)
-        File.close()
-        print(dirname)
-        temp_Win.destroy()
-    print("tester")
 # Main Window GUI
 def soundGUI():
     window = Tk()
     window.title("SoundBoard")
     window.geometry("1400x700")
     window.bind("<Key>",aNote)
+    window.configure(bg="black")
+  #The following line overrides the screen and does an odd sort of takeover  
+    #window.overrideredirect(1)
 
     print("Testing")
     label = Label(window,text="Sound Files must be .wav format.",font=("Helvetica",35))
     label.pack()
 
-    
+#------Buttons for changing the sound-------------------
     OneButton = Button(window, text="Change Sound One")
     OneButton.bind('<Button-1>',soundOne)
     OneButton.pack()
@@ -148,5 +34,6 @@ def soundGUI():
     FiveButton = Button(window, text="Change Sound Five")
     FiveButton.bind('<Button-1>',soundFour)
     FiveButton.pack()
+
     
     window.mainloop()
