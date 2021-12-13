@@ -1,8 +1,10 @@
 from soundBoard import*
 
 
-
-
+def createNote(event):
+    print("This should not be printing")
+    test = Label( text="Press the key that you want to bind", font =( "Heleveltica", 15))
+    test.pack()
 
 # Main Window GUI
 def soundGUI():
@@ -18,6 +20,7 @@ def soundGUI():
     print("Testing")
     label = Label(window,text="Sound Files must be .wav format.",font=("Helvetica",35))
     label.pack()
+
 
 #------Buttons for changing the sound-------------------
     OneButton = Button(window, text="Change Sound One")

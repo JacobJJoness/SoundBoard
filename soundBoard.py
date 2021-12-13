@@ -45,10 +45,7 @@ def soundFour(event):
 def soundFive(event):
     changeSound(4)
 
-def createNote(window):
-    print("This should not be printing")
-    test = Label(window, text="Press the key that you want to bind", font =( "Heleveltica", 15))
-    test.pack()
+
     
     #keyPrompt = Label(tempWin, text = "Press the Key for the new sound")
     
