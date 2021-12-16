@@ -27,7 +27,7 @@ def changeSound(num):
 
 # Function to return what key was pressed
 def keyPressed(event):
-    return event.char
+    print(event.keysym)
 ##Functions to determine which value to change
 def soundOne(event):
     changeSound(0)
