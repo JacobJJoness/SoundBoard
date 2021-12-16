@@ -2,9 +2,9 @@ from soundBoard import*
 
 
 def createNote(event):
-    print("This should not be printing")
     test = Label( text="Press the key that you want to bind", font =( "Heleveltica", 15))
     test.pack()
+
 
 # Main Window GUI
 def soundGUI():
@@ -17,7 +17,6 @@ def soundGUI():
   #The following line overrides the screen and does an odd sort of takeover  
     #window.overrideredirect(1)
 
-    print("Testing")
     label = Label(window,text="Sound Files must be .wav format.",font=("Helvetica",35))
     label.pack()
 
@@ -42,7 +41,7 @@ def soundGUI():
     #----button-for new keybind-----in progress
     #
     newBindButton = Button(window, text = "New Sound Bind")
-    newBindButton.bind('<Button-1>', createNote(window))
+    newBindButton.bind('<Button-1>', createNote)
     newBindButton.pack()
 
     #----button for deleting binds----unfinished

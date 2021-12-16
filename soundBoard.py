@@ -24,7 +24,6 @@ def changeSound(num):
         File.close()
         print(dirname)
         temp_Win.destroy()
-    print("tester")
 
 # Function to return what key was pressed
 def keyPressed(event):
