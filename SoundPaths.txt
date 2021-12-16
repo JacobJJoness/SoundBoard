@@ -1,4 +1,4 @@
-D:/SchoolWork/PersonalWorks/pythonPiano/4409__pinkyfinger__piano-notes-1-octave/d.wav
+C:/Users/ccpok/OneDrive/Documents/GitHub/SoundBoard/4409__pinkyfinger__piano-notes-1-octave/b.wav
 C:\Users\genja\Documents\GitHub\pythonPiano\4409__pinkyfinger__piano-notes-1-octave\b.wav
 C:\Users\genja\Documents\GitHub\pythonPiano\4409__pinkyfinger__piano-notes-1-octave\c.wav
 D:/SchoolWork/PersonalWorks/pythonPiano/4409__pinkyfinger__piano-notes-1-octave/gg.wav

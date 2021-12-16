@@ -50,7 +50,7 @@ def soundGUI():
     #----button-for new keybind-----in progress
     #
     newBindButton = Button(window, text = "New Sound Bind")
-    newBindButton.bind('<Button-1>', createNote(window))
+    newBindButton.bind('<Button-1>', createNote)
     newBindButton.pack()
 
     #----button for deleting binds----unfinished
