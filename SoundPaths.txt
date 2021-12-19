@@ -1,10 +1,5 @@
-D:/SchoolWork/PersonalWorks/pythonPiano/4409__pinkyfinger__piano-notes-1-octave/a.wav
-D:/SchoolWork/PersonalWorks/pythonPiano/4409__pinkyfinger__piano-notes-1-octave/b.wav
-D:/SchoolWork/PersonalWorks/pythonPiano/4409__pinkyfinger__piano-notes-1-octave/c.wav
-D:/SchoolWork/PersonalWorks/pythonPiano/4409__pinkyfinger__piano-notes-1-octave/gg.wav
-Placeholder
-Placeholder
-Placeholder
-Placeholder
-Placeholder
-Placeholder
+q D:/SchoolWork/PersonalWorks/pythonPiano/4409__pinkyfinger__piano-notes-1-octave/a.wav
+w D:/SchoolWork/PersonalWorks/pythonPiano/4409__pinkyfinger__piano-notes-1-octave/b.wav
+e D:/SchoolWork/PersonalWorks/pythonPiano/4409__pinkyfinger__piano-notes-1-octave/c.wav
+r D:/SchoolWork/PersonalWorks/pythonPiano/4409__pinkyfinger__piano-notes-1-octave/gg.wav
+a C:/Users/genja/Documents/GitHub/pythonPiano/4409__pinkyfinger__piano-notes-1-octave/b.wavt C:/Users/genja/Documents/GitHub/pythonPiano/4409__pinkyfinger__piano-notes-1-octave/ff.wavz C:/Users/genja/Documents/GitHub/pythonPiano/4409__pinkyfinger__piano-notes-1-octave/ff.wavy C:/Users/genja/Documents/GitHub/pythonPiano/4409__pinkyfinger__piano-notes-1-octave/cc.wav
