@@ -1,29 +1,51 @@
-import tkinter as tk
-import tkinter.ttk as ttk
-from ctypes import windll
+from tkinter import *
 
-GWL_EXSTYLE=-20
-WS_EX_APPWINDOW=0x00040000
-WS_EX_TOOLWINDOW=0x00000080
+root = Tk()
+# turns off title bar, geometry
+root.overrideredirect(True)
+# set new geometry
+root.geometry('900x700+200+100')
+# set background color of title bar
+back_ground = "#2c2c2c"
 
-def set_appwindow(root):
-    hwnd = windll.user32.GetParent(root.winfo_id())
-    style = windll.user32.GetWindowLongPtrW(hwnd, GWL_EXSTYLE)
-    style = style & ~WS_EX_TOOLWINDOW
-    style = style | WS_EX_APPWINDOW
-    res = windll.user32.SetWindowLongPtrW(hwnd, GWL_EXSTYLE, style)
-    # re-assert the new window style
-    root.wm_withdraw()
-    root.after(10, lambda: root.wm_deiconify())
+# set background of window
+content_color = "#ffffff"
+# make a frame for the title bar
+title_bar = Frame(root, bg=back_ground, relief='raised', bd=1, highlightcolor=back_ground,highlightthickness=0)
 
-def main():
-    root = tk.Tk()
-    root.wm_title("AppWindow Test")
-    button = ttk.Button(root, text='Exit', command=lambda: root.destroy())
-    button.place(x=10,y=10)
-    root.overrideredirect(True)
-    root.after(10, lambda: set_appwindow(root))
-    root.mainloop()
+# put a close button on the title bar
+close_button = Button(title_bar, text='x',  command=root.destroy,bg=back_ground, padx=5, pady=2, activebackground="red", bd=0,    font="bold", fg='white',        activeforeground="white", highlightthickness=0)
+ # window title
+title_window = "Title Name"
+title_name = Label(title_bar, text=title_window, bg=back_ground, fg="white")
+# a canvas for the main area of the window
+window = Canvas(root, bg="white", highlightthickness=0)
 
-if __name__ == '__main__':
-    main()
+# pack the widgets
+title_bar.pack(expand=1, fill=X)
+title_name.pack(side=LEFT)
+close_button.pack(side=RIGHT)
+window.pack(expand=1, fill=BOTH)
+x_axis = None
+y_axis = None
+# bind title bar motion to the move window function
+
+
+def move_window(event):
+    root.geometry('+{0}+{1}'.format(event.x_root, event.y_root))
+
+
+def change_on_hovering(event):
+    global close_button
+    close_button['bg'] = 'red'
+
+
+def return_to_normal_state(event):
+   global close_button
+   close_button['bg'] = back_ground
+
+
+title_bar.bind('<B1-Motion>', move_window)
+close_button.bind('<Enter>', change_on_hovering)
+close_button.bind('<Leave>', return_to_normal_state)
+root.mainloop()

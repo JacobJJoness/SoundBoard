@@ -13,22 +13,26 @@ def createNote(event):
 def soundGUI():
     window = Tk()
     window.title("SoundBoard")
-    window.geometry("1000x600")
+    #window.geometry("500x300+200+200")
     #this line might be the key to having a "generalized keybind" inside and outside of the program
     window.bind("<Key>",aNote)
     #window.configure(bg="black")
-  #The following line overrides the screen and does an odd sort of takeover  
+    #The following line overrides the screen and does an odd sort of takeover  
     #window.overrideredirect(1)
     #window.wm_attributes('-fullscreen', 'True')
     #window.attributes('-type', 'dock')
 
-    #remove title bar
+#remove title bar
     window.overrideredirect(1)
 
     def move_app(e):
         window.geometry(f'+{e.x_root}+{e.y_root}')
+    
+    def quitter(e):
+        window.quit()
+        #root.destroy()
 
-    # Creating the fake title bar
+# Creating the fake title bar
     title_bar = Frame(window, bg="darkgreen", relief="raised", bd=0)
     title_bar.pack(expand=1, fill=X)
 
@@ -36,12 +40,14 @@ def soundGUI():
     title_label.pack(side=LEFT, pady=0)
 
 
-    # Bind the title bar
+# Bind the title bar
     title_bar.bind("<B1-Motion>", move_app)
 
+# Title bar buttons
+    close_label = Label(title_bar, text="  X  ", bg="darkgreen", fg="white", relief="sunken", bd=0)
+    close_label.pack(side=RIGHT, pady=4)
+    close_label.bind("<B1-Motion>", quitter)
 
-
-    # Title bar buttons
     my_button = Button(window, text="X", font=("Helvetica, 32"), command=window.quit)
     my_button.pack(pady=100)
 

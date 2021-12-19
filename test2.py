@@ -2,7 +2,7 @@ from tkinter import *
 
 root = Tk()
 root.title('Codemy.com - Change Titlebar Color')
-root.geometry("500x300")
+root.geometry("1000x600")
 
 # remove title bar
 root.overrideredirect(True)
