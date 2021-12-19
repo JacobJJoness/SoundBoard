@@ -1,30 +1,29 @@
-#Import the required Libraries
-from tkinter import *
-from tkinter import ttk
-#Create an instance of Tkinter frame
-win = Tk()
-#Set the geometry of the Tkinter frame
-win.geometry("750x250")
+import tkinter as tk
+import tkinter.ttk as ttk
+from ctypes import windll
 
-#Define a function to update the entry widget
-def entry_update(text):
-   entry.delete(0,END)
-   entry.insert(0,text)
+GWL_EXSTYLE=-20
+WS_EX_APPWINDOW=0x00040000
+WS_EX_TOOLWINDOW=0x00000080
 
-#Create an Entry Widget
-entry= Entry(win, width= 30, bg= "white")
-entry.pack(pady=10)
+def set_appwindow(root):
+    hwnd = windll.user32.GetParent(root.winfo_id())
+    style = windll.user32.GetWindowLongPtrW(hwnd, GWL_EXSTYLE)
+    style = style & ~WS_EX_TOOLWINDOW
+    style = style | WS_EX_APPWINDOW
+    res = windll.user32.SetWindowLongPtrW(hwnd, GWL_EXSTYLE, style)
+    # re-assert the new window style
+    root.wm_withdraw()
+    root.after(10, lambda: root.wm_deiconify())
 
-#Create Multiple Buttons with different commands
-button_dict={}
-option= ["Python", "Java", "Go", "C++"]
+def main():
+    root = tk.Tk()
+    root.wm_title("AppWindow Test")
+    button = ttk.Button(root, text='Exit', command=lambda: root.destroy())
+    button.place(x=10,y=10)
+    root.overrideredirect(True)
+    root.after(10, lambda: set_appwindow(root))
+    root.mainloop()
 
-for i in option:
-   def func(x=i):
-        
-        return entry_update(x)
-
-   button_dict[i]=ttk.Button(win, text=i, command= func)
-   button_dict[i].pack()
-
-win.mainloop()
+if __name__ == '__main__':
+    main()
