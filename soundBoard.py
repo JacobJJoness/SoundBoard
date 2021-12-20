@@ -37,9 +37,10 @@ def keyPressed(event):
             word_array = line.split()
             if(word_array[0] == event.keysym):
                 dirname = filedialog.askopenfilename(parent = temp_Win,initialdir = "/",title = 'Please select a file')
-                if dirname != "":
+                #The preceding line is acting as the file type checker.
+                if dirname != "" or dirname[len(dirname)-4:] == ".wav":
                     File=open("SoundPaths.txt","w")
-                    File.writeline(word_array[0] + " " + dirname)
+                    File.write(word_array[0] + " " + dirname + "\n")
                     File.close()
                     temp_Win.destroy()
                     return
@@ -47,7 +48,7 @@ def keyPressed(event):
     File = open("SoundPaths.txt","a")
     dirname = filedialog.askopenfilename(parent = temp_Win,initialdir = "/",title = 'Please select a file')
     if dirname != "":
-        File.write(event.keysym+ " " + dirname)
+        File.write(event.keysym + " " + dirname+ "\n")
         File.close()
     temp_Win.destroy()
     return
@@ -66,8 +67,10 @@ def aNote(event):
         for line in f: 
             #this splits the line string into an array of words.
             try:
+                
                 word_array = line.split()
                 if(word_array[0] == event.keysym):
+                    print("Playing sound " + event.keysym)
                     sound = pygame.mixer.Sound(word_array[1])
                     sound.play()
             except:

@@ -1,10 +1,8 @@
-C:/Users/ccpok/OneDrive/Documents/GitHub/SoundBoard/4409__pinkyfinger__piano-notes-1-octave/b.wav
-C:\Users\genja\Documents\GitHub\pythonPiano\4409__pinkyfinger__piano-notes-1-octave\b.wav
-C:\Users\genja\Documents\GitHub\pythonPiano\4409__pinkyfinger__piano-notes-1-octave\c.wav
-D:/SchoolWork/PersonalWorks/pythonPiano/4409__pinkyfinger__piano-notes-1-octave/gg.wav
-Placeholder
-Placeholder
-Placeholder
-Placeholder
-Placeholder
-Placeholder
+q C:\Users\genja\Documents\GitHub\SoundBoard\Sounds\a.wav
+w C:\Users\genja\Documents\GitHub\SoundBoard\Sounds\b.wav
+e C:\Users\genja\Documents\GitHub\SoundBoard\Sounds\c.wav
+r C:\Users\genja\Documents\GitHub\SoundBoard\Sounds\d.wav
+a C:\Users\genja\Documents\GitHub\SoundBoard\Sounds\e.wav
+d C:/Users/genja/Documents/GitHub/SoundBoard/Sounds/ff.wav
+k C:/Users/genja/Documents/GitHub/SoundBoard/Sounds/gg.wav
+o C:/Users/genja/Documents/GitHub/SoundBoard/Sounds/g.wav
