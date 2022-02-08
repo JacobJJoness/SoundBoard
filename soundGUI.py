@@ -4,9 +4,9 @@ from soundBoard import*
 def createNote(event):
     test = Label( text="Press the key that you want to bind", font =( "Heleveltica", 15))
     test.pack()
-    key= ""
     keyTracker = Tk()
     keyTracker.bind("<Key>", keyPressed)
+    
 
 
 # Main Window GUI

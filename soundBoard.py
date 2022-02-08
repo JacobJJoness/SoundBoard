@@ -28,7 +28,7 @@ def changeSound(num):
     
 
 # Function to return what key was pressed
-def keyPressed(event):
+def keyPressed(event,tracker):
     temp_Win = Tk()
     temp_Win.withdraw()
     with open("SoundPaths.txt", 'r') as f: 
@@ -43,6 +43,7 @@ def keyPressed(event):
                     File.write(word_array[0] + " " + dirname + "\n")
                     File.close()
                     temp_Win.destroy()
+                    tracker = True
                     return
     f.close()
     File = open("SoundPaths.txt","a")
@@ -50,6 +51,7 @@ def keyPressed(event):
     if dirname != "":
         File.write(event.keysym + " " + dirname+ "\n")
         File.close()
+        tracker = True
     temp_Win.destroy()
     return
 

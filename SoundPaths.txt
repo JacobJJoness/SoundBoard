@@ -6,3 +6,5 @@ a C:\Users\genja\Documents\GitHub\SoundBoard\Sounds\e.wav
 d C:/Users/genja/Documents/GitHub/SoundBoard/Sounds/ff.wav
 k C:/Users/genja/Documents/GitHub/SoundBoard/Sounds/gg.wav
 o C:/Users/genja/Documents/GitHub/SoundBoard/Sounds/g.wav
+m C:/Users/genja/Documents/GitHub/SoundBoard/Sounds/e.wav
+b C:/Users/genja/Documents/GitHub/SoundBoard/Sounds/bb.wav
