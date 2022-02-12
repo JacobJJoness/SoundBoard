@@ -85,11 +85,9 @@ class MainWindow:
             for line in f: 
                 #this splits the line string into an array of words.
                 try:
-                    
-                    word_array = line.split()
-                    if(word_array[0] == event.keysym):
-                        
-                        sound = pygame.mixer.Sound(word_array[1:])
+                    if(line[0] == event.keysym):
+                        print(line[2:])
+                        sound = pygame.mixer.Sound(line[2:len(line)-1])
                         sound.play()
                         print("Playing sound " + event.keysym)
                 except:

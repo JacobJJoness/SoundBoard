@@ -1,2 +1,4 @@
 a C:/Users/genja/Documents/GitHub/SoundBoard/Sounds/b.wav
 s C:/Users/genja/Documents/GitHub/SoundBoard/Sounds/cc.wav
+d C:/Users/genja/Documents/GitHub/SoundBoard/Sounds/d.wav
+f C:/Users/genja/Documents/GitHub/SoundBoard/Sounds/f.wav
