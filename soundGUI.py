@@ -1,13 +1,13 @@
 from soundBoard import*
 
 
-def createNote(event):
-    test = Label( text="Press the key that you want to bind", font =( "Heleveltica", 15))
-    test.pack()
-    keyTracker = Tk()
-    keyTracker.bind("<Key>", keyPressed)
-    
 
+  
+def createNote(self,event):
+      test = Label( text="Press the key that you want to bind", font =( "Heleveltica", 15))
+      test.pack()
+      keyTracker = Tk()
+      keyTracker.bind("<Key>", keyPressed)
 
 # Main Window GUI
 def soundGUI():
