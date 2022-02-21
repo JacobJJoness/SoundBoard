@@ -1,8 +1,4 @@
-q C:\Users\genja\Documents\GitHub\SoundBoard\Sounds\a.wav
-w C:\Users\genja\Documents\GitHub\SoundBoard\Sounds\b.wav
-e C:\Users\genja\Documents\GitHub\SoundBoard\Sounds\c.wav
-r C:\Users\genja\Documents\GitHub\SoundBoard\Sounds\d.wav
-a C:\Users\genja\Documents\GitHub\SoundBoard\Sounds\e.wav
-d C:/Users/genja/Documents/GitHub/SoundBoard/Sounds/ff.wav
-k C:/Users/genja/Documents/GitHub/SoundBoard/Sounds/gg.wav
-o C:/Users/genja/Documents/GitHub/SoundBoard/Sounds/g.wav
+a C:/Users/genja/Documents/GitHub/SoundBoard/Sounds/b.wav
+s C:/Users/genja/Documents/GitHub/SoundBoard/Sounds/cc.wav
+d C:/Users/genja/Documents/GitHub/SoundBoard/Sounds/d.wav
+f C:/Users/genja/Documents/GitHub/SoundBoard/Sounds/f.wav
