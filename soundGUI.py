@@ -33,23 +33,23 @@ def soundGUI():
         #root.destroy()
 
 # Creating the fake title bar
-    title_bar = Frame(window, bg="darkgreen", relief="raised", bd=0)
+    title_bar = Frame(window, bg="darkGrey", relief="raised", bd=0)
     title_bar.pack(expand=1, fill=X)
 
-    title_label = Label(title_bar, text="My Awesome App!!", bg="darkGreen", fg="white")
+    title_label = Label(title_bar, text="Soundboard", bg="darkGrey", fg="white")
     title_label.pack(side=LEFT, pady=0)
 
+# Title bar buttons
+    close_label = Button(title_bar, text="X", font=("Helvetica, 10"), command=window.quit, fg="white",bg="red", relief="sunken", bd=0,height= 1, width=5)
+    close_label.pack(side=RIGHT, pady=1)
+    close_label.bind("<B1-Motion>", quitter)
 
 # Bind the title bar
     title_bar.bind("<B1-Motion>", move_app)
 
-# Title bar buttons
-    close_label = Label(title_bar, text="  X  ", bg="darkgreen", fg="white", relief="sunken", bd=0)
-    close_label.pack(side=RIGHT, pady=4)
-    close_label.bind("<B1-Motion>", quitter)
 
-    my_button = Button(window, text="X", font=("Helvetica, 32"), command=window.quit)
-    my_button.pack(pady=100)
+
+    
 
     label = Label(window,text="Sound Files must be .wav format.",font=("Helvetica",35))
     label.configure(bg='gray')
