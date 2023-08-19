@@ -18,7 +18,7 @@ def loadSounds(soundData):
 
     for item in data:
         print(f"Name: {item['name']}, bindID: {item['bindID']}, bindName: {item['bindName']}")
-        soundData.append(item['name'] = customtkinter.CTkFrame( master = scrollable_frame, width=300, height=50 ))
+        soundData.append(customtkinter.CTkFrame( master = scrollable_frame, width=300, height=50 ))
 loadSounds()
 #Button Call for changing sound
 def changeSound():
