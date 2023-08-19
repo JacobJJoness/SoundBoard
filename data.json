@@ -1,0 +1,18 @@
+[
+    {
+      "name": "Object 1",
+      "bindID": 123,
+      "bindName": "Binding 1"
+    },
+    {
+      "name": "Object 2",
+      "bindID": 456,
+      "bindName": "Binding 2"
+    },
+    {
+      "name": "Object 3",
+      "bindID": 789,
+      "bindName": "Binding 3"
+    }
+  ]
+  
