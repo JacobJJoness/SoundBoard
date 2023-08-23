@@ -2,7 +2,8 @@
     {
       "name": "Object 1",
       "bindID": 123,
-      "bindName": "Binding 1"
+      "bindName": "Binding 1",
+      "path":"/"
     },
     {
       "name": "Object 2",
