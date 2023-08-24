@@ -10,7 +10,14 @@ class SoundManager:
         self.sound_data = self.load_sounds()
 
     def add_sound(self):
-        newName = self.copy_audio_file()
+        nameCapture = ctk.CTkInputDialog(text="Enter Sound Name:", title="Name your sound save")
+        newName = nameCapture.get_input()
+
+        keyBinder = ctk.CTkInputDialog(text="Enter a Key to bind to:", title="Name your sound save")
+        newBind = keyBinder.get_input()
+
+        self.copy_audio_file()
+
 
         # Create and configure the frame
         frame = ctk.CTkFrame(master=self.parentFrame, width=300, height=50, fg_color='#1A1A1A')
@@ -20,7 +27,7 @@ class SoundManager:
         frame_label = ctk.CTkLabel(frame, text=newName, width=30)
         frame_label.grid(row=0, column=0, padx=10)
 
-        bindButton = ctk.CTkButton(master=frame, command=self.play_sound, text='Bind', width=30, height=30)
+        bindButton = ctk.CTkButton(master=frame, command=self.play_sound, text=newBind, width=30, height=30)
         bindButton.grid(row=0, column=1, padx=10)
 
         changeButton = ctk.CTkButton(master=frame, command=lambda f=frame: self.change_sound(f), text='Change',
@@ -36,8 +43,7 @@ class SoundManager:
 
     def copy_audio_file(self):
         # Ask the user to select an audio file
-        nameCapture = ctk.CTkInputDialog(text="Enter Sound Name:", title="Name your sound save")
-        newName = nameCapture.get_input()
+        
 
         file_path = filedialog.askopenfilename(filetypes=[("Audio Files", "*.wav *.mp3 *.ogg")])
 
@@ -46,7 +52,7 @@ class SoundManager:
             shutil.copy(file_path, destination_folder)
             print("File copied successfully.")
         
-        return newName
+        
 
     def play_sound(self):
         print("Play sound functionality")
@@ -71,7 +77,7 @@ class SoundManager:
             frame_label = ctk.CTkLabel(frame,  text=item.get('name', ''), width=30)
             frame_label.grid(row=0, column=0, padx=10)
 
-            bindButton = ctk.CTkButton(master=frame, command=self.play_sound, text= item.get('bindID', ''), width=30, height=30)
+            bindButton = ctk.CTkButton(master=frame, command=self.play_sound, text= item.get('bindKey', ''), width=30, height=30)
             bindButton.grid(row=0, column=1, padx=10)
 
             changeButton = ctk.CTkButton(master=frame, command=lambda f=frame: self.change_sound(f), text='Change',

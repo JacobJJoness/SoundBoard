@@ -4,7 +4,7 @@ from sound_manager import SoundManager
 
 # Setting Color Mode
 ctk.set_appearance_mode("dark")
-ctk.set_default_color_theme("theme.json")
+ctk.set_default_color_theme("blue")
 
 # Creating Window
 root = ctk.CTk()

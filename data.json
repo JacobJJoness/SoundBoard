@@ -1,34 +1,38 @@
 [
     {
       "name": "Object 1",
-      "bindID": 123,
-      "bindName": "Binding 1",
+      "bindKey": 123,
       "path":"/"
     },
     {
-      "name": "Object 2",
-      "bindID": 456,
-      "bindName": "Binding 2"
-    },
-    {
-      "name": "Object 3",
-      "bindID": 789,
-      "bindName": "Binding 3"
-    },
-     {
       "name": "Object 1",
-      "bindID": 123,
-      "bindName": "Binding 1"
+      "bindKey": 123,
+      "path":"/"
     },
     {
-      "name": "Object 2",
-      "bindID": 456,
-      "bindName": "Binding 2"
+      "name": "Object 1",
+      "bindKey": 123,
+      "path":"/"
     },
     {
-      "name": "Object 3",
-      "bindID": 789,
-      "bindName": "Binding 3"
+      "name": "Object 1",
+      "bindKey": 123,
+      "path":"/"
+    },
+    {
+      "name": "Object 1",
+      "bindKey": 123,
+      "path":"/"
+    },
+    {
+      "name": "Object 1",
+      "bindKey": 123,
+      "path":"/"
+    },
+    {
+      "name": "Object 1",
+      "bindKey": 123,
+      "path":"/"
     }
   ]
   
