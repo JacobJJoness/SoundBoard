@@ -18,7 +18,7 @@ scrollable_frame = ctk.CTkScrollableFrame(master=root, width=300, height=400)
 scrollable_frame.pack(pady=20, padx=60)
 
 #Calling Sound_manager(Master Frame Here)
-sound_manager = SoundManager(scrollable_frame)
+sound_manager = SoundManager(scrollable_frame,root)
 
 # Title of scroll window
 label = ctk.CTkLabel(master=scrollable_frame, text="Editor", font=("Copperplate Gothic Light", 24))

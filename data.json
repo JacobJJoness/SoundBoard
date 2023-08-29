@@ -1,38 +1,17 @@
 [
     {
-      "name": "Object 1",
-      "bindKey": 123,
-      "path":"/"
+        "name": "Anote",
+        "bindKey": "a",
+        "path": "sounds\\a.wav"
     },
     {
-      "name": "Object 1",
-      "bindKey": 123,
-      "path":"/"
+        "name": "b note",
+        "bindKey": "s",
+        "path": "sounds\\b.wav"
     },
     {
-      "name": "Object 1",
-      "bindKey": 123,
-      "path":"/"
-    },
-    {
-      "name": "Object 1",
-      "bindKey": 123,
-      "path":"/"
-    },
-    {
-      "name": "Object 1",
-      "bindKey": 123,
-      "path":"/"
-    },
-    {
-      "name": "Object 1",
-      "bindKey": 123,
-      "path":"/"
-    },
-    {
-      "name": "Object 1",
-      "bindKey": 123,
-      "path":"/"
+        "name": "g",
+        "bindKey": "d",
+        "path": "sounds\\c.wav"
     }
-  ]
-  
+]
