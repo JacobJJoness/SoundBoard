@@ -8,7 +8,7 @@ ctk.set_default_color_theme("blue")
 
 # Creating Window
 root = ctk.CTk()
-root.geometry("800x600")
+root.geometry("500x500")
 root.title("DigiB-")
 
 

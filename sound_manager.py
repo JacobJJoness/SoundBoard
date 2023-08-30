@@ -119,7 +119,10 @@ class SoundManager:
         # Create and configure the frame
         frame = ctk.CTkFrame(master=self.parentFrame, width=300, height=50, fg_color='#1A1A1A')
         frame.grid_rowconfigure(0, weight=1)
-        frame.grid_columnconfigure(4, weight=1)
+        frame.grid_columnconfigure(0, weight=1)
+        frame.grid_columnconfigure(1, weight=1)
+        frame.grid_columnconfigure(2, weight=1)
+        frame.grid_columnconfigure(3, weight=1)
         #Frame Variables
 
         #creating a unique ID based on the item bindKey allowing for a frame to trace back to its data source.
@@ -129,17 +132,17 @@ class SoundManager:
         frame.path = filePath
 
 
-        frame_label = ctk.CTkLabel(frame, text=name, width=30)
+        frame_label = ctk.CTkLabel(frame, text=name, width=90)
         frame_label.grid(row=0, column=0, padx=10)
 
-        bindButton = ctk.CTkButton(master=frame, command=lambda f=frame: self.button_play_sound(f), text=bind, width=30, height=30)
-        bindButton.grid(row=0, column=1, padx=10)
+        bindButton = ctk.CTkButton(master=frame, command=lambda f=frame: self.button_play_sound(f), text=bind, width=50, height=20)
+        bindButton.grid(row=0, column=1, padx=20)
 
         
 
         deleteButton = ctk.CTkButton(master=frame, command=lambda f=frame: self.delete_sound(f), text='x',
-                                     width=15, height=30, fg_color='red', hover_color='#A00000')
-        deleteButton.grid(row=0, column=3, padx=60)
+                                     width=30, height=20, fg_color='red', hover_color='#A00000')
+        deleteButton.grid(row=0, column=3,padx=20)
         
         frame.pack(pady=3)
 
