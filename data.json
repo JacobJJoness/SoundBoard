@@ -1,17 +1,12 @@
 [
     {
-        "name": "Anote",
-        "bindKey": "a",
-        "path": "sounds\\a.wav"
-    },
-    {
-        "name": "g",
-        "bindKey": "d",
-        "path": "sounds\\c.wav"
-    },
-    {
         "name": "PuggyFuggy",
         "bindKey": "s",
         "path": "sounds\\bb_H80FKX4k.wav"
+    },
+    {
+        "name": "A",
+        "bindKey": "a",
+        "path": "sounds\\b.wav"
     }
 ]

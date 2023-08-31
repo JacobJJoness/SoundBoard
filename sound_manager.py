@@ -56,6 +56,10 @@ class SoundManager:
         # Create the new frame
         self.create_frame(newName,newBind,copiedFilePath)
         
+        self.init_key_listeners()  # Reinitialize key listeners
+
+        #Refreshing app to account for data changes.
+        self.appRoot.update()
         
 
 
@@ -104,7 +108,13 @@ class SoundManager:
         
         # Update the JSON file after deleting
         self.save_sounds()
-        #REMINDER:Sounds also need to be deleted from sound folder
+      
+        del self.key_to_sound[frameID]  # Remove key binding
+
+        self.init_key_listeners()  # Reinitialize key listeners
+
+        #Refreshing app to account for data changes.
+        self.appRoot.update()
 
     def save_sounds(self):
         with open('data.json', 'w') as json_file:
