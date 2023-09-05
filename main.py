@@ -21,10 +21,10 @@ scrollable_frame.pack(pady=20, padx=60)
 sound_manager = SoundManager(scrollable_frame,root)
 
 # Title of scroll window
-label = ctk.CTkLabel(master=scrollable_frame, text="Editor", font=("Copperplate Gothic Light", 24))
+label = ctk.CTkLabel(master=scrollable_frame, text="Editor", font=("Cascadia Code SemiBold", 24))
 label.pack(pady=12, padx=10)
 
-addButton = ctk.CTkButton(master=scrollable_frame, text="Add Sound", width=200, font=("Copperplate Gothic Light", 17),
+addButton = ctk.CTkButton(master=scrollable_frame, text="Add Sound", width=200, font=("Cascadia Code SemiBold", 17),
                           command=sound_manager.add_sound)
 addButton.pack(pady=10)
 
