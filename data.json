@@ -1,12 +1,1 @@
-[
-    {
-        "name": "PuggyFuggy",
-        "bindKey": "s",
-        "path": "sounds\\bb_H80FKX4k.wav"
-    },
-    {
-        "name": "q",
-        "bindKey": "q",
-        "path": "sounds\\wet-fart-6139.mp3"
-    }
-]
+[]
