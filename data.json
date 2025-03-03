@@ -1,1 +1,7 @@
-[]
+[
+    {
+        "name": "a",
+        "bindKey": "a",
+        "path": "sounds\\a.wav"
+    }
+]

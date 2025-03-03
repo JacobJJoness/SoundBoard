@@ -18,9 +18,9 @@ class SoundManager:
         self.appRoot.bind("<Key>", self.key_pressed)  # Bind key event
     
     def init_key_listeners(self):
-        for sound_info in self.sound_data:
-            bind_key = sound_info.get("bindKey")
-            sound_path = sound_info.get("path")
+        for user_sound_input in self.sound_data:
+            bind_key = user_sound_input.get("bindKey")
+            sound_path = user_sound_input.get("path")
             if bind_key and sound_path:
                 sound = pygame.mixer.Sound(sound_path)
                 self.key_to_sound[bind_key] = sound
@@ -43,13 +43,14 @@ class SoundManager:
 
         #Updating the sound_data list and JSON
         #---could be split into its own function
-        sound_info = {
+        user_sound_input = {
             "name": newName,
             "bindKey": newBind,
             "path": copiedFilePath
         }
-
-        self.sound_data.append(sound_info)  # Append sound info to sound_data list
+       
+           
+        self.sound_data.append(user_sound_input)  # Append sound info to sound_data list
 
         # Save updated sound_data to JSON file
         self.save_sounds()
